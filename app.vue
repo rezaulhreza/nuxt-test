@@ -1,10 +1,14 @@
 <template>
   <div>
-
-    <NuxtLink to="/">Home</NuxtLink> |
-    <NuxtLink to="/about">About</NuxtLink> |
-    <NuxtLink to="/tasks">Tasks</NuxtLink> |
-
-    <NuxtPage />
+    <NuxtLayout :layout="layout">
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
+
+<script setup>
+const layout = "default"; //why? choose this based on an API call or logged-in status
+</script>
+
+
+
